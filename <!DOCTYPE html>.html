@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+    <header>
+        <Title>Pictures</Title>
+            <h3>Pictures</h3>
+            <p>A place to upload images!</p>  
+            <!--upload information/uploadcare.com-->
+            <script>UPLOADCARE_PUBLIC_KEY = '1e0244cc86910d5cc5d7';</script>
+            <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    </header>
+
+        <!--Background-->
+        <body style="background-color: rgb(0, 0, 0); align-content: center;">
+            <style> 
+                body { 
+                    background-image: url("https://images.pexels.com/photos/531880/pexels-photo-531880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"); 
+                    background-repeat: no-repeat;
+                } 
+            </style>
+
+            <!--Image uploading-->
+<center>
+<img id="output" width="520" height="300"/> 
+
+<script>
+  var loadFile = function(event) {
+    var output = document.getElementById('output');
+    output.src = URL.createObjectURL(event.target.files[0]);
+    output.onload = function() {
+      // show image
+    }
+  };
+</script>
+            
+<br>
+<input type="file" accept="image/*" onchange="loadFile(event)">
+<script>
+  /*if image upload successfull, will unlock submit*/
+  
+</script>
+
+
+
+<!--Save Button/disbaled (nowhere to save to)-->
+<button type="submit" disabled>Submit</button>
+</form>
+<br>
+
+<div>
+<H1>Image Gallery</H1>
+
+</div>
+
+
+<!--Save to Storage/public key to upload care-->
+
+
+
+<!--gallery (display storage)-->
+<div class="gallery">
+
+</div>
+
+
+</center>
